@@ -1,0 +1,12 @@
+#Update db
+dotnet ef -v database update -r linux-x64
+
+#Create migration
+dotnet ef -v migrations add DatabaseCreation
+
+#Resolves 
+#- System.PlatformNotSupportedException: Strings.PlatformNotSupported_DataSqlClient
+dotnet run --arch x64 --os linux
+
+#AWS CD/CI pipeline
+https://catalog.us-east-1.prod.workshops.aws/workshops/02696107-09ac-4313-a6cb-3798048b07d7/en-US/10-how-to-set-up-my-cicd-pipeline/add-application-deployment-to-my-pipeline
