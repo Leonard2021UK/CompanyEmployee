@@ -1,7 +1,8 @@
 using AutoMapper;
+using Entities.DTOs;
 using Entities.Models;
 
-namespace Entities.DTOs;
+namespace CompanyEmployee.Mappings;
 
 public class MappingProfile : Profile
 {

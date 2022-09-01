@@ -31,7 +31,13 @@ namespace CompanyEmployee.Controllers
             try
             {
                 var companies = _repository.Company.GetAllCompanies(trackChanges: false);
-                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);                // var companiesDto = companies.Select(c => new CompanyDto
+                // {
+                //     Id = c.Id,
+                //     Name = c.Name,
+                //     FullAddress = string.Join(' ', c.Address, c.Country)
+                // }).ToList();
+                return Ok(companiesDto);
                 
                 return Ok(companiesDto);
             }
