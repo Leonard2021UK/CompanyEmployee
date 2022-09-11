@@ -12,11 +12,9 @@ pipeline{
             }
         }
         stage('Test') {
-            agent {
-                docker { image 'mcr.microsoft.com/dotnet/sdk:6.0 ' }
-            }
+            agent { dockerfile true }
             steps {
-               sh --version
+               sh 'ls -la'
            }
         }
     }
