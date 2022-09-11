@@ -15,7 +15,9 @@ pipeline{
             agent {
                 docker { image 'mcr.microsoft.com/dotnet/sdk:6.0 ' }
             }
-           
+            steps {
+               docker build -t build_img
+           }
         }
     }
 }
