@@ -5,6 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
+RUN pwd
+RUN ls -la
 COPY ["CompanyEmployee/CompanyEmployee.csproj", "CompanyEmployee/"]
 RUN dotnet restore "CompanyEmployee/CompanyEmployee.csproj"
 COPY . .
