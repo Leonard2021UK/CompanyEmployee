@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Build project') {
       agent {
         dockerfile true
       }
