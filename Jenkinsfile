@@ -18,6 +18,9 @@ pipeline {
       agent {
         dockerfile true
       }
+      steps {
+        sh 'docker --version'
+      }
     }
   }
 }
