@@ -13,6 +13,14 @@ pipeline {
         git(branch: 'master', credentialsId: 'jenkins ', url: 'https://github.com/Leonard2021UK/CompanyEmployee')
       }
     }
+    
+    stage('Current folder') {
+          steps {
+            echo "*************************************************"
+            pwd
+            echo "*************************************************"
+          }
+        }
 
     stage('Build & test project') {
       agent {
