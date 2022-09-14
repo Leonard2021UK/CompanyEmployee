@@ -15,14 +15,8 @@ pipeline {
     }
 
     stage('Build & test project') {
-      environment {
-        HOME="."
-      }
       agent {
         dockerfile true
-      }
-      steps {
-        sh 'docker --version'
       }
     }
   }
