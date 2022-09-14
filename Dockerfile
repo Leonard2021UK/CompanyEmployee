@@ -5,7 +5,7 @@ WORKDIR /source
 # copy everything and restore as distinct layers
 COPY . .
 RUN dotnet restore
-
+RUN dotnet --version
 # build app
 WORKDIR /source/CompanyEmployee
 RUN dotnet publish -c release -o /app --no-restore
@@ -14,6 +14,5 @@ RUN dotnet publish -c release -o /app --no-restore
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /app ./
-WORKDIR /source/CompanyEmployee
-RUN dotnet --version
+
 ENTRYPOINT ["dotnet", "CompanyEmployee.dll"]
