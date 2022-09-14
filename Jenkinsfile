@@ -19,7 +19,7 @@ pipeline {
         dockerfile true
       }
       steps {
-        sh 'docker --version'
+        sh 'ls -la'
       }
     }
   }
