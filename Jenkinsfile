@@ -21,13 +21,14 @@ pipeline {
       steps {
         sh 'ls -la'
         sh 'cat /etc/hostname'
+        sh 'pwd'
       }
     }
     
-    stage('Test') {
-      steps {
-        sh 'dotnet test'
-      }
-    }
+//     stage('Test') {
+//       steps {
+//         sh 'dotnet test'
+//       }
+//     }
   }
 }
