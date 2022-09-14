@@ -14,14 +14,16 @@ pipeline {
       }
     }
 
-    stage('Build project') {
+    stage('Build & test project') {
+      environment {
+        HOME="."
+      }
       agent {
         dockerfile true
       }
       steps {
-        sh 'ls -la'
+        sh 'docker --version'
       }
     }
-
   }
 }

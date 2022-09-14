@@ -10,3 +10,6 @@ dotnet run --arch x64 --os linux
 
 #AWS CD/CI pipeline
 https://catalog.us-east-1.prod.workshops.aws/workshops/02696107-09ac-4313-a6cb-3798048b07d7/en-US/10-how-to-set-up-my-cicd-pipeline/add-application-deployment-to-my-pipeline
+
+#Jenkins in docker
+https://www.jenkins.io/doc/book/installing/docker/
