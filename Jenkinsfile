@@ -16,7 +16,7 @@ pipeline {
     
     stage('Current folder') {
       steps {
-        pwd
+        sh 'pwd'
       }
     }
 
