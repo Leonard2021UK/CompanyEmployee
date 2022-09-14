@@ -15,6 +15,9 @@ pipeline {
     }
 
     stage('Build & test project') {
+      agent {
+        dockerfile true
+      }
       steps {
         sh 'ls -la'
       }
