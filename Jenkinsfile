@@ -15,7 +15,6 @@ pipeline {
     }
 
     stage('Build & test project') {
-      agent any
       steps {
         sh 'ls -la'
       }
