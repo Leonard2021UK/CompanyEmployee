@@ -14,13 +14,19 @@ pipeline {
       }
     }
 
-    stage('Build & test project') {
+    stage('Build') {
       agent {
         dockerfile true
       }
       steps {
         sh 'ls -la'
         sh 'cat /etc/hostname'
+      }
+    }
+    
+    stage('Test') {
+      steps {
+        sh 'dotnet test'
       }
     }
   }
