@@ -20,7 +20,7 @@ pipeline {
       }
       steps {
         sh 'ls -la'
-        sh 'docker --version'
+        sh 'cat /etc/hostname'
       }
     }
   }
