@@ -16,6 +16,10 @@ RUN dotnet restore
 
 # copy everything and restore as distinct layers
 COPY . ./CompanyEmployee
+COPY . .Contracts
+COPY . ./Entities
+COPY . ./LoggerService
+COPY . ./Repository
 WORKDIR /source/CompanyEmployee
 RUN dotnet publish -c release -o /app --no-restore
 
