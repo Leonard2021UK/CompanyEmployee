@@ -22,7 +22,7 @@ COPY . ./LoggerService
 COPY . ./Repository
 
 #WORKDIR /source
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o /app
 
 ## build app
 #WORKDIR /source/CompanyEmployee
