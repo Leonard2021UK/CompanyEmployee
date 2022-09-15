@@ -34,4 +34,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /app ./
 RUN cat CompanyEmployee.dll
-#ENTRYPOINT ["dotnet", "CompanyEmployee/CompanyEmployee.dll"]
+ENTRYPOINT ["dotnet"]
+CMD ["CompanyEmployee.dll"]
