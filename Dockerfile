@@ -13,8 +13,8 @@ RUN dotnet publish -c release -o /app --no-restore
 
 # final stage/image
 #FROM mcr.microsoft.com/dotnet/aspnet:6.0
-WORKDIR /app
+#WORKDIR /app
 #COPY --from=build /app ./
 #RUN cd .. && ls -la
-ENTRYPOINT ["dotnet"]
-CMD ["CompanyEmployee.dll"]
+#ENTRYPOINT ["dotnet"]
+#CMD ["CompanyEmployee.dll"]
