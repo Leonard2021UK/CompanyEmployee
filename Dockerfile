@@ -1,7 +1,8 @@
 ﻿# https://hub.docker.com/_/microsoft-dotnet
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+RUN cd .. && ls -la
 WORKDIR /source
-
+RUN ls -la
 # copy everything and restore as distinct layers
 COPY . .
 RUN dotnet restore
