@@ -21,7 +21,7 @@ COPY . ./Entities
 COPY . ./LoggerService
 COPY . ./Repository
 
-WORKDIR /source
+#WORKDIR /source
 RUN dotnet publish -c release -o /app --no-restore
 
 ## build app
