@@ -3,9 +3,10 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /source
 
 # copy csproj and restore as distinct layers
-RUN cd .. && ls -la
 COPY *.sln .
+RUN ls -la
 COPY CompanyEmployee/*.csproj ./CompanyEmployee/
+RUN ls -la
 RUN dotnet restore
 
 # copy everything and restore as distinct layers
