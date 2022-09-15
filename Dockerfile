@@ -16,4 +16,4 @@ RUN dotnet publish -c release -o /app --no-restore
 WORKDIR /app
 #COPY --from=build /app ./
 #RUN cd .. && ls -la
-#ENTRYPOINT ["dotnet", "CompanyEmployee.dll"]
+ENTRYPOINT ["dotnet"]
