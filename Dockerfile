@@ -33,5 +33,5 @@ RUN dotnet publish -c release -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /app ./
-RUN ls -la
-ENTRYPOINT ["dotnet", "CompanyEmployee/CompanyEmployee.dll"]
+RUN dotnet
+#ENTRYPOINT ["dotnet", "CompanyEmployee/CompanyEmployee.dll"]
