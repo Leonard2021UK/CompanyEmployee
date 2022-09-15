@@ -17,3 +17,4 @@ WORKDIR /app
 #COPY --from=build /app ./
 #RUN cd .. && ls -la
 ENTRYPOINT ["dotnet"]
+CMD ["CompanyEmployee.dll"]
