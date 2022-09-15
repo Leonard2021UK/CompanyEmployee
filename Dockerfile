@@ -15,11 +15,11 @@ RUN ls -la
 RUN dotnet restore
 
 # copy everything and restore as distinct layers
-COPY . ./CompanyEmployee
-COPY . ./Contracts
-COPY . ./Entities
-COPY . ./LoggerService
-COPY . ./Repository
+COPY CompanyEmployee/. ./CompanyEmployee
+COPY Contracts/. ./Contracts
+COPY Entities/. ./Entities
+COPY LoggerService/. ./LoggerService
+COPY Repository/. ./Repository
 RUN pwd && ls -la
 WORKDIR /source
 RUN pwd && ls -la
