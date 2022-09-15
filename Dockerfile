@@ -20,8 +20,9 @@ COPY . ./Contracts
 COPY . ./Entities
 COPY . ./LoggerService
 COPY . ./Repository
-
-#WORKDIR /source
+RUN pwd && ls -la
+WORKDIR /source
+RUN pwd && ls -la
 RUN dotnet publish -c release -o /app
 
 ## build app
