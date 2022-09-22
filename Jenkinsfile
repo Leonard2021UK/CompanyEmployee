@@ -19,9 +19,7 @@ pipeline {
         dockerfile true
       }
       steps {
-        sh 'ls -la'
-        sh 'cat /etc/hostname'
-        sh 'pwd'
+        echo "done"
       }
     }
     
