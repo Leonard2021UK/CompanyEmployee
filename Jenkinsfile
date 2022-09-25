@@ -25,7 +25,7 @@ pipeline {
     stage('Rename') {
           agent any
           steps {
-            sh "docker image tag employee_app 2ab9d04e41264e80606551255f285ba254573c01:latest"
+            sh "docker image tag 3a0e234df3a4 rspoto/0635bc6f7262"
           }
         }
 //     stage('Docker Push') {
