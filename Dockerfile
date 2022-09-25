@@ -4,14 +4,12 @@ WORKDIR /source
 
 # copy csproj and restore as distinct layers
 COPY *.sln .
-RUN ls -la
 COPY CompanyEmployee/*.csproj ./CompanyEmployee/
 COPY Contracts/*.csproj ./Contracts/
 COPY Entities/*.csproj ./Entities/
 COPY LoggerService/*.csproj ./LoggerService/
 COPY Repository/*.csproj ./Repository/
 #RUN for file in $(ls ./*/*.csproj); do mkdir -p ${file%.*}/ && mv $file src/${file%.*}/; done
-RUN ls -la
 RUN dotnet restore
 
 # copy everything and restore as distinct layers
@@ -20,9 +18,7 @@ COPY Contracts/. ./Contracts
 COPY Entities/. ./Entities
 COPY LoggerService/. ./LoggerService
 COPY Repository/. ./Repository
-RUN pwd && ls -la
 WORKDIR /source
-RUN pwd && ls -la
 RUN dotnet publish -c release -o /app
 
 ## build app
