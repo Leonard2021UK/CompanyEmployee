@@ -20,3 +20,13 @@ https://stackoverflow.com/questions/48833905/how-to-list-files-in-a-stopped-dock
 
 #run the image
 docker run -it --rm -p 8000:80 e9b
+
+#rename image tag#!/usr/bin/env bash
+ if [ $# -eq 0 ]
+   then
+     tag='latest'
+   else
+     tag=$1
+ fi
+ 
+ docker build -t project:$tag .
