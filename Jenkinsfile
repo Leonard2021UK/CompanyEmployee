@@ -20,7 +20,6 @@ pipeline {
       }
       steps {
         docker image tag CompanyEmployee 2ab9d04e41264e80606551255f285ba254573c01:latest
-        echo "done"
       }
     }
     stage('Docker Push') {
