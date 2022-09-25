@@ -19,15 +19,16 @@ pipeline {
         dockerfile true
       }
       steps {
-        sh 'docker run -it --entrypoint=/bin/bash 7bdd'
+        echo "done"
       }
     }
     
-//     stage('Test') {
-//       steps {
+    stage('Test') {
+      steps {
+        sh 'docker run -it --entrypoint=/bin/bash 7bdd'
 //         sh 'docker run --entrypoint=dotnet CompanyEmployee.dll 7bdd'
 //         bash 'dotnet CompanyEmployee.dll'
-//       }
-//     }
+      }
+    }
   }
 }
