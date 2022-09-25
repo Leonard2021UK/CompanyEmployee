@@ -19,7 +19,7 @@ pipeline {
         dockerfile true
       }
       steps {
-        docker image tag "CompanyEmployee" 2ab9d04e41264e80606551255f285ba254573c01:latest
+        sh "docker image tag CompanyEmployee 2ab9d04e41264e80606551255f285ba254573c01:latest"
       }
     }
     stage('Docker Push') {
