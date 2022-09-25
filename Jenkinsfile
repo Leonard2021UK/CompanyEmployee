@@ -37,5 +37,12 @@ pipeline {
             }
         }
     }
+    stage('Docker run') {
+        agent any
+        steps {
+            sh "docker run -d -p 8080:80 --name testapp 3a0e234df3a4"
+        }
+    }
+    
   }
 }
