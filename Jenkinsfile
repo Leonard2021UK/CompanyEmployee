@@ -23,10 +23,11 @@ pipeline {
       }
     }
     
-//     stage('Test') {
-//       steps {
-//         sh 'dotnet test'
-//       }
-//     }
+    stage('Test') {
+      steps {
+        sh 'docker run -it --entrypoint=/bin/bash 7bdd'
+        bash 'dotnet CompanyEmployee.dll'
+      }
+    }
   }
 }
