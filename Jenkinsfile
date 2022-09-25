@@ -25,7 +25,7 @@ pipeline {
     
     stage('Test') {
       steps {
-        sh 'docker run --entrypoint=\'dotnet CompanyEmployee.dll\' 7bdd'
+        sh 'docker run --entrypoint=\'dotnet CompanyEmployee.dll\' 3a0'
 //         sh 'docker run --entrypoint=dotnet CompanyEmployee.dll 7bdd'
 //         bash 'dotnet CompanyEmployee.dll'
       }
