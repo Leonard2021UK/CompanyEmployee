@@ -27,6 +27,7 @@ pipeline {
       steps {
         sh 'docker run --entrypoint=sh 7bdd'
         sh 'dotnet CompanyEmployee.dll'
+        
       }
     }
   }
