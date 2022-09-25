@@ -19,7 +19,7 @@ pipeline {
         dockerfile true
       }
       steps {
-        echo "done"
+        sh 'docker run -it --entrypoint=/bin/bash 7bdd'
       }
     }
     
