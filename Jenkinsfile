@@ -27,7 +27,7 @@ pipeline {
           steps {
           	withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
             	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-              sh 'docker push rspoto/testapp:latest'
+              sh 'docker push 0635bc6f7262:latest'
             }
           }
         }
