@@ -14,11 +14,7 @@ pipeline {
       }
     }
     
-    stage('Copy tagdockerimage script'){
-        steps{
-                sh "cp /var/tagdockerimage.sh /var/jenkins_home/workspace/CompanyEmployee_master@2"
-        }
-    }
+
 //     stage('Build') {
 //       agent {
 //         dockerfile true
