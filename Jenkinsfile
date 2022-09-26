@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Clean workspace') {
-      agent any
+        agent any
       steps {
         cleanWs()
       }
@@ -11,12 +11,6 @@ pipeline {
     stage('Git Checkout') {
       steps {
         git(branch: 'master', credentialsId: 'jenkins ', url: 'https://github.com/Leonard2021UK/CompanyEmployee')
-      }
-    }
-    
-    stage('Copy tagdockerimage script'){
-      steps{
-        sh "cp /var/tagdockerimage.sh /var/jenkins_home/workspace/CompanyEmployee_master@2"
       }
     }
 
@@ -29,12 +23,11 @@ pipeline {
 //       }
 //     }
     stage('Buildv2') {
-      agent any
-      steps {
-      sh "pwd"
-      sh "./dockerimagetag.sh rspoto/0635bc6f7262"
+          agent any
+          steps {
+            sh "./dockerimagetag.sh rspoto/0635bc6f7262"
+          }
         }
-    }
 //     stage('Rename') {
 //           agent any
 //           steps {
@@ -56,5 +49,6 @@ pipeline {
             sh "docker run -d -p 8080:80 --name testapp 3a0e234df3a4"
         }
     }
+    
   }
 }
