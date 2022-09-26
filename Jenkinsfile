@@ -13,7 +13,9 @@ pipeline {
         git(branch: 'master', credentialsId: 'jenkins ', url: 'https://github.com/Leonard2021UK/CompanyEmployee')
       }
     }
-
+    stage('Copy tagdockerimage script'){
+        sh "cp /var/tagdockerimage.sh /var/jenkins_home/workspace/CompanyEmployee_master@2"
+    }
 //     stage('Build') {
 //       agent {
 //         dockerfile true
