@@ -14,20 +14,26 @@ pipeline {
       }
     }
 
-    stage('Build') {
-      agent {
-        dockerfile true
-      }
-      steps {
-        echo "done"
-      }
-    }
-    stage('Rename') {
+//     stage('Build') {
+//       agent {
+//         dockerfile true
+//       }
+//       steps {
+//         echo "done"
+//       }
+//     }
+    stage('Buildv2') {
           agent any
           steps {
-            sh "docker image tag 3a0e234df3a4 rspoto/0635bc6f7262"
+            sh "./dockerimagetag.sh rspoto/0635bc6f7262"
           }
         }
+//     stage('Rename') {
+//           agent any
+//           steps {
+//             sh "docker image tag 3a0e234df3a4 rspoto/0635bc6f7262"
+//           }
+//         }
     stage('Docker Push') {
         agent any
         steps {
