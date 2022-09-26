@@ -25,6 +25,7 @@ pipeline {
     stage('Buildv2') {
           agent any
           steps {
+          sh "pwd"
             sh "./dockerimagetag.sh rspoto/0635bc6f7262"
           }
         }
