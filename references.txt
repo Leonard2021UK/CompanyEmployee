@@ -35,3 +35,20 @@ docker run -it --rm -p 8000:80 e9b
  
  #run dind
  docker run --name jenkins-docker --rm --detach   --privileged --network jenkins --network-alias docker   --env DOCKER_TLS_CERTDIR=/certs   --volume jenkins-docker-certs:/certs/client   --volume jenkins-data:/var/jenkins_home   --publish 2376:2376   docker:dind --storage-driver overlay2
+
+
+#To copy a file from the local file system to a container, run the command for Docker container or Kubernetes pod, respectively:
+docker cp <src-path> <container>:<dest-path> 
+kubectl cp <src-path> <your-pod-name>:<dest-path> 
+
+#For example:
+docker cp "C:\ProcDump\procdump64.exe" sitecore-xm1_cm_1:"C:\" 
+kubectl cp "C:\ProcDump\procdump64.exe" k8s-xm-cm-pod:procdump64.exe
+
+#To copy a file from the container to the local file system, use:
+docker cp <container>:<src-path> <local-dest-path> 
+kubectl cp <your-pod-name>:<src-path> <local-dest-path> 
+
+#For example:
+docker cp sitecore-xm1_cm_1:"C:\inetpub\wwwroot\App_Data\logs" "C:\" 
+kubectl cp k8s-xm-cm-pod:some-file.txt "C:\"

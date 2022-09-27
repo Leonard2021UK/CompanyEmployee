@@ -8,11 +8,11 @@ pipeline {
       }
     }
 
-    stage('Git Checkout') {
-      steps {
-        git(branch: 'master', credentialsId: 'jenkins ', url: 'https://github.com/Leonard2021UK/CompanyEmployee')
-      }
-    }
+//     stage('Git Checkout') {
+//       steps {
+//         git(branch: 'master', credentialsId: 'jenkins ', url: 'https://github.com/Leonard2021UK/CompanyEmployee')
+//       }
+//     }
   }
 }
 
