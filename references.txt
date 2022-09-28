@@ -52,3 +52,9 @@ kubectl cp <your-pod-name>:<src-path> <local-dest-path>
 #For example:
 docker cp sitecore-xm1_cm_1:"C:\inetpub\wwwroot\App_Data\logs" "C:\" 
 kubectl cp k8s-xm-cm-pod:some-file.txt "C:\"
+
+#Building from custom docker file
+docker build -f jenkins.Dockerfile -t myjenkins-blueocean:2.361.1-1 .
+
+
+docker run --name jenkins-blueocean --restart=on-failure --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --volume jenkins-data:/var/jenkins_home --volume jenkins-docker-certs:/certs/client:ro --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.361.1-1
