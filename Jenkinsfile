@@ -17,18 +17,18 @@
         }  
         stage('Build') {  
             steps {  
-                bat 'dotnet build %WORKSPACE%\\jenkins-demo\\CompanyEmployee\\CompanyEmployee.sln --configuration Release' 
+                bat 'dotnet build %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.sln --configuration Release' 
                 //bat 'dotnet build C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\HRMPipelines\\jenkins-demo\\HRM\\HRM.sln --configuration Release'  
             }  
         }  
         stage('Test') {  
             steps {  
-                bat 'dotnet test %WORKSPACE%\\jenkins-demo\\CompanyEmployee\\CompanyEmployee.Test\\CompanyEmployee.Test.csproj --logger:trx'  
+                bat 'dotnet test %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.Test\\CompanyEmployee.Test.csproj --logger:trx'  
             }  
         }
         stage("Release"){
             steps {
-                bat 'dotnet build  %WORKSPACE%\\jenkins-demo\\CompanyEmployee\\CompanyEmployee.sln /p:PublishProfile=" %WORKSPACE%\\jenkins-demo\\CompanyEmployee\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
+                bat 'dotnet build  %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.sln /p:PublishProfile=" %WORKSPACE%\\jenkins-demo\\CompanyEmployee\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
             }
         }
         stage('Deploy') {
