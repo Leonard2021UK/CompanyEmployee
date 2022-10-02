@@ -15,17 +15,9 @@
     &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest.Index_ReturnsAViewResult_WithAListOfBrainstormSessions&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3e1f9614_002D4525_002D45f3_002Dada2_002Dc6f36a37af0c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=41692b4b_002Dba0a_002D431d_002D8bb8_002Dc6f43e88009c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest.Index_ReturnsAViewResult_WithAListOfBrainstormSessions&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5321f406_002Dfe37_002D4cf6_002D8449_002D0f5578c96664/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5321f406_002Dfe37_002D4cf6_002D8449_002D0f5578c96664/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest.Index_ReturnsAViewResult_WithAListOfBrainstormSessions&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
