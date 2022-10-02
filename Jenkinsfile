@@ -15,7 +15,7 @@
                git credentialsId: 'd5ec799a-dd4d-4269-9203-1a4922b04500', url: 'https://github.com/Leonard2021UK/CompanyEmployee.git', branch: 'master'
            }  
         }  
-        stage('Build') {  
+        stage('Build stage') {  
             steps {  
                 bat 'dotnet build %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.sln --configuration Release' 
                 //bat 'dotnet build C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\HRMPipelines\\jenkins-demo\\HRM\\HRM.sln --configuration Release'  
