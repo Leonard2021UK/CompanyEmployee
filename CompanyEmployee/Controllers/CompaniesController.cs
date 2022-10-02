@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using Entities.DTOs;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +32,8 @@ namespace CompanyEmployee.Controllers
             try
             {
                 var companies = _repository.Company.GetAllCompanies(trackChanges: false);
-                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);                // var companiesDto = companies.Select(c => new CompanyDto
+                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);               
+                // var companiesDto = companies.Select(c => new CompanyDto
                 // {
                 //     Id = c.Id,
                 //     Name = c.Name,
@@ -39,12 +41,11 @@ namespace CompanyEmployee.Controllers
                 // }).ToList();
                 return Ok(companiesDto);
                 
-                return Ok(companiesDto);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong in the {nameof(GetCompanies)}action {ex}");
-                return StatusCode(500, "Internal server error");
+                return StatusCode(500, ex.Message);
             }
         }
     }
