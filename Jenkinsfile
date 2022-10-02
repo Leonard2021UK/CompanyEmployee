@@ -37,7 +37,7 @@
                 bat 'net stop "w3svc"'
             
                 // Deploy package to IIS
-                bat '"C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\CompanyEmployee\\bin\\Debug\\net6.0\\CompanyEmployee.zip" -dest:auto -setParam:"IIS Web Application Name"="HRM.Web" -skip:objectName=filePath,absolutePath=".\\\\PackageTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
+                bat '"C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\CompanyEmployee\\bin\\Debug\\net6.0\\CompanyEmployee.zip" -dest:auto -setParam:"IIS Web Application Name"="HRM.Web" -skip:objectName=filePath,absolutePath=".\\\\PackageTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
             
                 // Start IIS again
                 bat 'net start "w3svc"'
