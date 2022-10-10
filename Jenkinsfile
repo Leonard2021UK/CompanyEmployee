@@ -28,7 +28,7 @@
         }
         stage("Release"){
             steps {
-                bat '"C:\\Program Files\\dotnet\\sdk\\6.0.400\\MSBuild.dll" %WORKSPACE%\\CompanyEmployee.sln /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
+                bat 'dotnet build %WORKSPACE%\\CompanyEmployee.sln /p:PublishProfile="%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
             }
         }
         stage('Deploy') {
