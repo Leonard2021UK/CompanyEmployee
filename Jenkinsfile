@@ -28,7 +28,7 @@
         }
         stage("Release"){
             steps {
-                bat 'dotnet publish %WORKSPACE%\\CompanyEmployee.sln /p:PublishProfile="%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml" /p:Platform="Any CPU"'
+                bat '"C:\\Program Files\\dotnet\\sdk\\6.0.400\\MSBuild.dll" %WORKSPACE%\\CompanyEmployee.sln /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
             }
         }
         stage('Deploy') {
@@ -37,7 +37,7 @@
                 bat 'net stop "w3svc"'
             
                 // Deploy package to IIS
-                bat '"C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package="%WORKSPACE%\\CompanyEmployee\\bin\\Debug\\net6.0\\CompanyEmployee.zip" -dest:auto -setParam:"IIS Web Application Name"="CompanyEmployee.Web" -skip:objectName=filePath,absolutePath=".\\\\PackageTmp\\\\Web.config$" -enableRule:DoNotDelete -allowUntrusted=true'
+                bat '"C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:package=%WORKSPACE%\\CompanyEmployee\\bin\\Release\\net6.0\\CompanyEmployee.zip -dest:package=C:\\inetpub\\CompanyEmployee\\CompanyEmployee.zip > web.log -skip:objectName=filePath,absolutePath=.\\\\PackageTmp\\\\Web.config$ -enableRule:DoNotDelete -allowUntrusted=true'
             
                 // Start IIS again
                 bat 'net start "w3svc"'
