@@ -25,7 +25,7 @@ namespace CompanyEmployee.Controllers
             // _repositoryManager.Company.FindAll();
             // _repositoryManager.Employee.FindAll();
             
-            return new string[] { "value1", "value2" };
+            return new string[] { "test_value", "value2" };
         }
     }
 }
