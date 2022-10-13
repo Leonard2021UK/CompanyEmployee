@@ -64,3 +64,17 @@ https://www.ahmetkucukoglu.com/en/how-to-publish-asp-net-core-application-by-usi
 
 #event filtering using xml, create trigger
 http://blogs.technet.com/b/askds/archive/2011/09/26/advanced-xml-filtering-in-the-windows-event-viewer.aspx
+
+#service trigger
+<QueryList> 
+   <Query Id="0"> 
+      <Select Path="System"> 
+         *[EventData[Data[@Name='param1'] and (Data='YOUR SERVICE NAME')]] 
+         and
+         *[EventData[Data[@Name='param2'] and (Data='running')]] 
+       </Select> 
+   </Query> 
+</QueryList>
+
+#host dotnet app on remote iis server
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-6.0&tabs=netcore-cli
