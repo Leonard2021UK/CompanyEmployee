@@ -43,12 +43,6 @@
                 bat 'net start "w3svc"'
             }
         }
-        stage('Start app') {
-            steps {
-                // Stop IIS
-                bat 'net stop "w3svc"'
-            }
-        }
         
     }
 }  
