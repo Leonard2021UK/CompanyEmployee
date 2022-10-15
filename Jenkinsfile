@@ -28,7 +28,7 @@
         }
         stage("Release"){
             steps {
-                bat 'dotnet publish %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.csproj /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml --no-build -c Release'
+                bat 'dotnet publish %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.csproj /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml -c Release'
             }
         }
         stage('Deploy') {

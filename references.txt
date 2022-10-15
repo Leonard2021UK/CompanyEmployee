@@ -78,3 +78,6 @@ http://blogs.technet.com/b/askds/archive/2011/09/26/advanced-xml-filtering-in-th
 
 #host dotnet app on remote iis server
 https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-6.0&tabs=netcore-cli
+
+#MSbuild parameters
+https://stackoverflow.com/questions/5598668/valid-parameters-for-msdeploy-via-msbuild
