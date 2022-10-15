@@ -29,8 +29,10 @@ namespace CompanyEmployee.Extensions
         
         public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
             services.AddDbContext<RepositoryContext>(opts =>
-                opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
+                opts.UseSqlServer(configuration.GetConnectionString("postgresConnection"), b =>
                     b.MigrationsAssembly("CompanyEmployee")));
+        
+        
         
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
             services.AddScoped<IRepositoryManager, RepositoryManager>();

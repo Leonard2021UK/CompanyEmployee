@@ -81,3 +81,6 @@ https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-iis?view=aspn
 
 #MSbuild parameters
 https://stackoverflow.com/questions/5598668/valid-parameters-for-msdeploy-via-msbuild
+
+#sqlserver docker connection
+https://stackoverflow.com/questions/45712122/connection-string-for-sqlserver-in-docker-container
