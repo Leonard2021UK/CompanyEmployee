@@ -2,7 +2,12 @@
     <PropertyGroup>
         <IsPackable>true</IsPackable>
     </PropertyGroup>
+
+    <PropertyGroup>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    </PropertyGroup>
     
+
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>

@@ -15,12 +15,12 @@
                git credentialsId: 'd5ec799a-dd4d-4269-9203-1a4922b04500', url: 'https://github.com/Leonard2021UK/CompanyEmployee.git', branch: 'master'
            }  
         }  
-        stage('Build stage') {  
-            steps {  
-                bat 'dotnet build %WORKSPACE%\\CompanyEmployee.sln --configuration Release' 
-                //bat 'dotnet build C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\HRMPipelines\\jenkins-demo\\HRM\\HRM.sln --configuration Release'  
-            }  
-        }  
+//         stage('Build stage') {  
+//             steps {  
+//                 bat 'dotnet build %WORKSPACE%\\CompanyEmployee.sln --configuration Release' 
+//                 //bat 'dotnet build C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\HRMPipelines\\jenkins-demo\\HRM\\HRM.sln --configuration Release'  
+//             }  
+//         }  
         stage('Test') {  
             steps {  
                 bat 'dotnet test %WORKSPACE%\\CompanyEmployeeTest\\CompanyEmployeeTest.csproj --logger:trx'  
@@ -28,7 +28,7 @@
         }
         stage("Release"){
             steps {
-                bat 'dotnet publish %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.csproj /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml'
+                bat 'dotnet publish -c Release -o %WORKSPACE%\\CompanyEmployee\\bin\\Release\\net6.0\\publish\\win-x64  %WORKSPACE%\\CompanyEmployee\\CompanyEmployee.csproj /p:PublishProfile=%WORKSPACE%\\CompanyEmployee\\Properties\\PublishProfiles\\JenkinsProfile.pubxml'
             }
         }
         stage('Deploy') {
