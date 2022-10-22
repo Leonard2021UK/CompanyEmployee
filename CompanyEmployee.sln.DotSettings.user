@@ -5,7 +5,7 @@
 	<s:Boolean x:Key="/Default/Environment/Hierarchy/Build/BuildTool/RecentDotNetCliExePaths/=_002Fusr_002Flib_002Fdotnet_002Fdotnet6_002D6_002E0_002E108_002Fdotnet/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/DotNetCliExePath/@EntryValue">C:\Program Files\dotnet\dotnet.exe</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\6.0.400\MSBuild.dll</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f4807c9_002D6a21_002D4deb_002Da3c1_002Df0a940f65dae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f4807c9_002D6a21_002D4deb_002Da3c1_002Df0a940f65dae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest.Index_ReturnsAViewResult_WithAListOfBrainstormSessions&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
@@ -17,7 +17,7 @@
 &lt;/SessionState&gt;</s:String>
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5321f406_002Dfe37_002D4cf6_002D8449_002D0f5578c96664/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5321f406_002Dfe37_002D4cf6_002D8449_002D0f5578c96664/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Index_ReturnsAViewResult_WithAListOfBrainstormSessions" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B7B1CE92-62E1-40AC-8D9E-73BD1A95C87B::net6.0::CompanyEmployeeTest.CompanyEmployeeTest.Index_ReturnsAViewResult_WithAListOfBrainstormSessions&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;

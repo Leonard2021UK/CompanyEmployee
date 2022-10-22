@@ -84,3 +84,6 @@ https://stackoverflow.com/questions/5598668/valid-parameters-for-msdeploy-via-ms
 
 #sqlserver docker connection
 https://stackoverflow.com/questions/45712122/connection-string-for-sqlserver-in-docker-container
+
+#docker SQL Server docker compose
+https://docs.docker.com/samples/aspnet-mssql-compose/

@@ -27,15 +27,15 @@ namespace CompanyEmployee.Extensions
         public static void ConfigureLoggerService(this IServiceCollection services) =>
             services.AddScoped<ILoggerManager, LoggerManager>();
         
-        // public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
-        //     services.AddDbContext<RepositoryContext>(opts =>
-        //         opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
-        //             b.MigrationsAssembly("CompanyEmployee")));
-        
         public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
             services.AddDbContext<RepositoryContext>(opts =>
-                opts.UseNpgsql(configuration.GetConnectionString("postgresConnection"), b =>
-                    b.MigrationsAssembly("postgres")));
+                opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b =>
+                    b.MigrationsAssembly("CompanyEmployee")));
+        
+        // public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
+        //     services.AddDbContext<RepositoryContext>(opts =>
+        //         opts.UseNpgsql(configuration.GetConnectionString("postgresConnection"), b =>
+        //             b.MigrationsAssembly("CompanyEmployee")));
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
             services.AddScoped<IRepositoryManager, RepositoryManager>();
         
